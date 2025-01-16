@@ -947,7 +947,7 @@ if (sessionStorage.length = 0) {
 const canvas = document.getElementById('animationCanvas');
 const ctx = canvas.getContext('2d');
 
-const totalFrames = 150; // Общее количество кадров
+// const totalFrames = 150; // Общее количество кадров
 const frames = []; // Массив для хранения изображений
 let currentFrame = 0; // Текущий кадр
 // const frameDuration = 1000 / 25; // Длительность одного кадра в мс (25 fps)
@@ -956,14 +956,25 @@ const frameDuration = 1000 / 30; // Длительность одного кад
 canvas.width = 300;  // Установите ширину вашего canvas
 canvas.height = 300; // Установите высоту вашего canvas
 
-// Загружаем все изображения
-for (let i = 1; i <= totalFrames; i++) {
-    const img = new Image();
-    // img.src = images/frame_${i}.jpg; // Название ваших картинок
-    // img.src = `styket/pictures/kube (${i}).png` // Название ваших картинок
-    img.src = `styket/pictures/kube (${i}).png` // Название ваших картинок
 
-    frames.push(img);
+const totalFrames = 150; // Общее количество кадров
+
+// Загружаем все изображения
+for (let j = 1; j <= 1; j++) {
+    if (j == 1) {
+        for (let i = 1; i <= totalFrames/2; i++) {
+            const img = new Image();
+            img.src = `styket/pictures1/kube (${i}).png` // Название ваших картинок
+
+            frames.push(img);
+        }
+    }
+        for (let i = 76; i <= totalFrames ; i++) {
+            const img = new Image();
+            img.src = `styket/pictures2/kube (${i}).png` // Название ваших картинок
+
+            frames.push(img);
+        }
 }
 
 function animate() {
